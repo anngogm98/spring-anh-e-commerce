@@ -8,6 +8,8 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -34,10 +36,12 @@ public class User {
     @Column(name = "email", nullable = false)
     private String email;
 
+    private String avatar;
+
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false)
-    private Role role;
+    private Set<Role> role;
 
     @Column(name = "non_locked")
     private Boolean nonLocked;
