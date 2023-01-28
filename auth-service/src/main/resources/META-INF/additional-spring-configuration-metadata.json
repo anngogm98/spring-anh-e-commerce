@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "spring.mail.ssl.protocols",
+      "type": "java.lang.String",
+      "description": "Description for spring.mail.ssl.protocols."
+    },
+    {
+      "name": "security.basic.enable",
+      "type": "java.lang.String",
+      "description": "Description for security.basic.enable."
+    },
+    {
+      "name": "security.ignored",
+      "type": "java.lang.String",
+      "description": "Description for security.ignored."
+    }
+  ] }

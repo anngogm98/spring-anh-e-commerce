@@ -39,5 +39,18 @@
 
         </createTable>
     </changeSet>
+    <changeSet id="28-01-update-table-user" author="TV">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="user"/>
+            <not>
+                <columnExists tableName="user" columnName="password"/>
+            </not>
+        </preConditions>
+        <addColumn tableName="user">
+            <column name="password" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
 
 </databaseChangeLog>

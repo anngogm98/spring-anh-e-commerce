@@ -1,12 +1,15 @@
 package com.example.authservice.entity;
 
-import com.sun.istack.NotNull;
+//import com.sun.istack.NotNull;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Table;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import javax.persistence.*;
+//import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
@@ -15,7 +18,7 @@ import java.util.Set;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "user")
+//@Table(name = "user")
 public class User {
     public enum Role {ADMIN, USER, PROVIDER}
 
@@ -35,6 +38,9 @@ public class User {
 
     @Column(name = "email", nullable = false)
     private String email;
+
+    @Column(name = "password")
+    private String password;
 
     private String avatar;
 

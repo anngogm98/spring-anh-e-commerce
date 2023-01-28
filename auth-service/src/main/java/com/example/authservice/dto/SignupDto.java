@@ -23,6 +23,9 @@ public class SignupDto {
     @Email
     private String email;
 
+    @NotEmpty
+    private String password;
+
     private String avatar;
 
     private Boolean nonLocked;
